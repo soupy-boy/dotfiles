@@ -1,0 +1,48 @@
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+"position": "top",
+"height": 14,
+"margin-left": 10,
+"margin-right": 10,
+"margin-top": 2,
+	
+"modules-left": [
+	"custom/menu",
+	"custom/separator#blank_1",
+	"clock",
+	"custom/separator#blank_1",
+	"custom/weather",
+	"custom/separator#blank_1",
+	"hyprland/window"
+],
+
+"modules-center": [		
+	"hyprland/workspaces#numbers"	
+],
+		
+"modules-right": [
+	"tray",
+	"custom/separator#blank_1",
+	"custom/swaync",
+	"custom/separator#blank_1",
+	"pulseaudio",
+	"custom/separator#blank_1",
+	"custom/power"
+	],
+
+
+// Additional format / customize modules
+
+"custom/power": {
+	"format": " ",
+	"icon-size": 20,
+	"tooltip": false
+},
+	
+"clock": {
+	//"format": "{:%I:%M %p - %d/%b}", //for AM/PM
+    "format": "{:%H:%M - %d/%b}", // 24H
+	"tooltip": false
+}
+}
