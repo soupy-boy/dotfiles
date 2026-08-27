@@ -1,0 +1,237 @@
+/* gruvbox - orignally JakooLit */
+
+*{
+font-family: "Iosevka Nerd Font";
+font-weight: bold;
+min-height: 0;
+/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+font-size: 100%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding-top: 1px;
+padding-bottom: 1px;
+}
+
+@define-color foreground #ebdbb2;
+@define-color background #282828;
+@define-color cursor #9ebbba;
+
+@define-color gruv_red #cc241d;
+@define-color gruv_red_2 #fb4934;
+@define-color gruv_green #98971a;
+@define-color gruv_yellow #d79921;
+@define-color gruv_blue #458588;
+@define-color gruv_blue_2 #83a598;
+@define-color gruv_purple #b16286;
+@define-color gruv_aqua #689d6a;
+@define-color gruv_grey #928374;
+
+#waybar.empty, #waybar.tiled, #waybar.floating {
+	background-color: transparent;
+}
+
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+    background-color: transparent;
+    padding: 0px;
+    border: 0px;
+}
+
+/*-----module groups----*/
+.modules-left,
+.modules-center,
+.modules-right {
+	background-color: @background;
+	border: 0.5px solid @foreground;
+	border-radius: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+/*-----modules indv----*/
+#taskbar button,
+#workspaces button {
+    color: @gruv_red;
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    padding-left: 4px;
+    padding-right: 4px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button.active,
+#workspaces button.active {
+    color: @foreground;
+    background-color: @gruv_red;
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.focused {
+    color: @gruv_grey;
+}
+
+
+#workspaces button.urgent {
+    color: @gruv_yellow;
+    border-radius: 10px;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+    color: @gruv_blue_2;
+    padding-left: 2px;
+    padding-right: 2px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#power-profiles-daemon,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
+#custom-cycle_wall,
+#custom-dot_update,
+#custom-file_manager,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-hint,
+#custom-hypridle,
+#custom-menu,
+#custom-playerctl,
+#custom-power_vertical,
+#custom-power,
+#custom-quit,
+#custom-reboot,
+#custom-settings,
+#custom-spotify,
+#custom-swaync,
+#custom-tty,
+#custom-updater,
+#custom-hyprpicker,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+	color: @gruv_red;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 6px;
+	padding-left: 6px;;
+
+}
+
+#custom-menu {
+	color: @gruv_blue;
+}
+
+#clock {
+	color: @gruv_green;
+}
+
+#custom-weather {
+	color: @gruv_purple;
+}
+
+#window {
+	color: @gruv_yellow;
+}
+
+#custom-swaync {
+	color: @gruv_blue;
+}
+
+#mpris {
+	color: @gruv_purple;
+}
+
+#pulseaudio {
+	color: @gruv_aqua;
+}
+
+#mode {
+	color: @gruv_red_2;
+	font-weight: bold;
+}
+#custom-power {
+	color: @gruv_red_2;
+	padding: 1px 3px;
+}
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+	color: @gruv_green;
+}
+#pulseaudio.muted {
+	color: @gruv_red_2;
+}
+#pulseaudio-microphone.muted {
+	color: @gruv_red;
+}
+#temperature.critical {
+    background-color: @gruv_red;
+}
+
+@keyframes blink {
+    to {
+        color: @gruv_yellow;
+    }
+}
+
+#pulseaudio-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+	min-width: 80px;
+	min-height: 5px;
+	border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+	min-height: 10px;
+	border-radius: 5px;
+}
+

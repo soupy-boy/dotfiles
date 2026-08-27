@@ -1,0 +1,241 @@
+/* swaync css */
+
+/* swaync colors - wallust from waybar.css */
+@import "colors.css";
+
+
+/* text */
+* {
+    font-family: "Iosevka Regular";
+    font-size: 18px;
+}
+
+.notification-row {
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification {
+    color: @text-color;
+    background: @noti-bg;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid @noti-border-color;
+}
+
+.notification-group {
+    background: transparent;
+}
+
+.notification-default-action {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: @noti-bg;
+    background: @noti-close;
+    text-shadow: none;
+    padding: 0;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.close-button:hover {
+    color: @noti-bg;
+    background: @noti-close-hover;
+    box-shadow: none;
+    transition: all .15s ease-in-out;
+    border: none;
+}
+
+
+.notification-action {
+    border: 1px solid @noti-border-color;
+    border-top: none;
+    border-radius: 10px;
+}
+
+
+.notification-default-action:hover,
+.notification-action:hover {
+    color: @text-color;
+    background: @noti-bg;
+}
+
+
+.notification-default-action {
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.body-image {
+    margin-top: 6px;
+    background: transparent;
+    color: @text-color;
+    border-radius: 10px;
+}
+
+.body {
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent;
+    color: @text-color;
+    text-shadow: none;
+}
+
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+    opacity: 1;
+    background: transparent;
+    border-radius: 0px;
+}
+
+
+.control-center {
+    color: @text-color;
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    border-radius: 0px;
+    max-height: 720px;
+    height: auto;
+}
+
+.control-center-list {
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+/* all labels*/
+
+label {
+    color: @text-color;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* widgets */
+
+/* "notification" and clear widget*/
+
+.widget-title {
+    padding: 3px 6px;
+    margin: 5px;
+}
+
+/* "notification" text */
+.widget-title > label {
+    font-size: 20px;
+}
+
+/* clear button */
+.widget-title>button {
+    color: @text-color;
+    background: transparent;
+    border-radius: 0px;
+    border: 2px solid @noti-bg-alt;
+}
+
+/* clear button hover */
+.widget-title>button:hover {
+    background: @noti-border-color;
+    color: @noti-close;
+}
+
+/* Do not disturb */
+.widget-dnd {
+    padding: 10px 12px;
+}
+.widget-dnd > label {
+    font-size: 20px;
+}
+
+/* do not disturb switch */
+.widget-dnd>switch {
+    border-radius: 0px;
+    border: 2px solid @noti-bg-alt;
+    background: @noti-border-color;
+}
+
+.widget-dnd>switch:checked {
+    background: @noti-close-hover;
+}
+
+.widget-dnd>switch slider {
+    background: @noti-bg;
+    border-radius: 0px;
+}
+
+.widget-dnd>switch:checked slider {
+    background: @noti-bg;
+    border-radius: 0px;
+}
+/* end of do not disturb widget */
+
+/* media player widget */
+.widget-mpris {
+    color: @text-color;
+    background: @noti-bg;
+    padding: 3px 6px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.widget-mpris > box > button {
+    border-radius: 10px;
+}
+
+.widget-mpris-player {
+    padding: 0px;
+    margin: 5px;
+}
+
+.widget-mpris-title {
+    font-size: 18px;
+}
+
+.widget-mpris-subtitle {
+    font-size: 13px;
+}
+/* media player widget end */
+
+
+/* volume widget */
+.widget-volume {
+    background: transparent;
+    padding: 2px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 0px;
+    color: @text-color;
+}
+
+.widget-volume trough {
+    background: @noti-bg-alt;
+    border-radius: 0px;
+    min-height: 3px;
+}
+
+.widget-volume highlight {
+    background: @text-color;
+    border-radius: 0px;
+}
+.widget-volume slider {
+    background: @noti-border-color;
+    border-radius: 0px;
+    border: 1px solid @noti-bg-alt;
+    margin: -3px;
+}
+
+/* volume widget end */
