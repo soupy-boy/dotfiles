@@ -10,8 +10,11 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 
-    -- set primary monitor for xwayland
+    -- set primary monitor for wayland
     hl.exec_cmd("xrandr --output DP-3 --primary")
+    -- nvidia sucks, have to focus on proper monitor as it launches second
+    --hl.dispatch(hl.dsp.focus({ monitor = "DP-3" }))
+    hl.exec_cmd("sleep 1.5 && hyprctl dispatch 'hl.dsp.focus({monitor = \"DP-3\"})' &")
 
     -- core startup apps
     hl.exec_cmd("hypridle")
