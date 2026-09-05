@@ -4,7 +4,7 @@
 /* ---- Configuration ---- */
 configuration {
     modi:                  "drun,run,filebrowser";
-    font:                  "Iosevka Regular 12";
+    font:                  "monospace 12";
     show-icons:            true;
     display-drun:          "";
 	display-run:           "";
@@ -17,7 +17,7 @@ configuration {
     window-format:         "{w} · {c} · {t}";
 }
 
-/* ---- Load pywal colors (custom wal template) ---- */
+/* ---- Load colors ---- */
 @import "~/.config/rofi/colors/gruvbox_aqua.rasi"
 
 /* ---- Window ---- */
@@ -37,7 +37,6 @@ window {
     fullscreen:             false;
     enabled:                true;
     border-radius:          12px;
-	background-image:   	url("~/.config/rofi/.current_wallpaper", height);
 }
 
 /* ---- Mainbox ---- */
@@ -188,7 +187,7 @@ element-icon {
 
 
 element-text {
-    font:                 "Iosevka Regular 12";
+    font:                  "monospace 12";
     background-color:      transparent;
     text-color:            inherit;
     cursor:                inherit;
