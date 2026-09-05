@@ -92,8 +92,6 @@
     "format": "{}",
     "max-length": 25,
     "separate-outputs": true,
-    "offscreen-css" : true,
-    "offscreen-css-text": "(inactive)",
      "rewrite": {
           "(.*) — Mozilla Firefox": " $1",
           "(.*) - fish": "> [$1]",
@@ -105,9 +103,9 @@
 "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": " ",
-      "deactivated": " ",
-                    }
+      "activated": "",
+      "deactivated": "",
+    },
 },
     
 "keyboard-state": {
@@ -242,7 +240,7 @@
 },
       
 "tray": {
-    "icon-size": 15,
+    "icon-size": 20,
     "spacing": 8,
 },
       
@@ -254,19 +252,6 @@
     "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
     "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
     "format-icons": ["", "", "󰕾", ""], 
-},
-      
-"wlr/taskbar": {
-    "format": "{icon} {name} ",
-    "icon-size": 15,
-    "all-outputs": false,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-          "wofi",
-          "rofi",  
-                   ]
 },
       
 "custom/menu": {
@@ -296,26 +281,29 @@
 },
 
 "custom/power": {
-    "format": "⏻ ",
+    "format": "{icon}",
+    "format-icons": [
+      "",
+    ],
     "exec": "echo ; echo 󰟡 power // blur",
     "on-click": "wleave",
     "interval" : 86400, // once every day
-    "tooltip": true,
+    "tooltip": false,
 },
 
 "custom/swaync": {
 	"tooltip": true,
 	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-	"format": "{} {icon} ",
+	"format": "{} {icon}",
 	"format-icons": {
-		"notification": "<span foreground='red'><sup></sup></span>",
-		"none": "",
-		"dnd-notification": "<span foreground='red'><sup></sup></span>",
-		"dnd-none": "",
-		"inhibited-notification": "<span foreground='red'><sup></sup></span>",
-		"inhibited-none": "",
-		"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-		"dnd-inhibited-none": ""
+        "notification": "<span font_desc='Font Awesome 7 Free'></span><span foreground='red'></span>",
+		"none": "<span font_desc='Font Awesome 7 Free'></span>",
+		"dnd-notification": "<span font_desc='Font Awesome 7 Free'></span><span foreground='red'></span>",
+		"dnd-none": "<span font_desc='Font Awesome 7 Free'></span>",
+		"inhibited-notification": "<span font_desc='Font Awesome 7 Free'></span><span foreground='red'></span>",
+		"inhibited-none": "<span font_desc='Font Awesome 7 Free'></span>",
+		"dnd-inhibited-notification": "<span font_desc='Font Awesome 7 Free'></span><span foreground='red'></span>",
+		"dnd-inhibited-none": "<span font_desc='Font Awesome 7 Free'></span>"
 	},
 	"return-type": "json",
 	"exec-if": "which swaync-client",
