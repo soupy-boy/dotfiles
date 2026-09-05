@@ -7,7 +7,7 @@ window {
     background-color: rgba(29, 32, 33, 0.8);
     --view-bg-color: #282828;
     --accent-bg-color: #ebdbb2;
-    font-family: "Iosevka Nerd Font Mono", monospace;
+    font-family: monospace;
 }
 
 button {
