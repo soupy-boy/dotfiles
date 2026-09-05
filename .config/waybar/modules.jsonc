@@ -1,71 +1,17 @@
 //* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
 
 {
-// HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
-// CIRCLES Style
+// HYPRLAND WORKSPACES
 "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true, 
-    "format": "{icon}",
-    "show-special": false,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-    },
-    "format-icons": {
-      "active": "",
-      "default": "",
-	},  
-},
-
-// ROMAN Numerals style
-"hyprland/workspaces#roman": {
-    "active-only":false,
-    "all-outputs": true,
-    "format": "{icon}",
-    "show-special": false,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "persistent-workspaces":{
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": [],
-    },
-    "format-icons": {
-      "1": "I",
-      "2": "II",
-      "3": "III",
-      "4": "IV",
-      "5": "V",
-      "6": "VI",
-      "7": "VII",
-      "8": "VIII",
-      "9": "IX",
-      "10": "X",
-      
-    },
-},
-
-// numbers styles
-"hyprland/workspaces#numbers": {
 	"active-only": false,
 	"all-outputs": true,
 	"format": "{icon}",
 	"show-special": false,
 	"on-click": "activate",
-	"on-scroll-up": "hyprctl dispatch workspace e+1",
-	"on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-scroll-up":   "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
     "persistent-workspaces": {
-      "*": 5
+      "*": [1, 2, 3, 4, 5]
 	},
 	"format-icons": {
 		"1": "1",
@@ -111,33 +57,11 @@
     "tooltip": true,
     "on-click": "blueman-manager",
 },
-     
+	
 "clock": {
     "interval": 1,
-    //"format": " {:%I:%M %p}", // AM PM format
-    "format": " {:%H:%M:%S}",
-    "format-alt": " {:%H:%M   %Y, %d %B, %A}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode"          : "year",
-      "mode-mon-col"  : 3,
-      "weeks-pos"     : "right",
-      "on-scroll"     : 1,
-      "format": {
-      "months":     "<span color='#ffead3'><b>{}</b></span>",
-      "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-      "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-      "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-      "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                }
-                }
-    },              
-    "actions":  {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
+	//"format": "{:%I:%M %p - %d/%b}", //for AM/PM
+    "format": "{:%H:%M - %d/%b}", // 24H
 },
    
 "cpu": {
@@ -166,7 +90,7 @@
     
 "hyprland/window": {
     "format": "{}",
-    "max-length": 40,
+    "max-length": 25,
     "separate-outputs": true,
     "offscreen-css" : true,
     "offscreen-css-text": "(inactive)",
@@ -371,8 +295,7 @@
 "custom/power": {
     "format": "⏻ ",
     "exec": "echo ; echo 󰟡 power // blur",
-    "on-click": "~/.config/hypr/scripts/Wlogout.sh",
-    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+    "on-click": "wleave",
     "interval" : 86400, // once every day
     "tooltip": true,
 },
@@ -401,12 +324,9 @@
     
 "custom/weather": {
     "format": "{}",
-    "format-alt": "{alt}: {}",
-    "format-alt-click": "click",
     "interval": 3600,
     "return-type": "json",
-    "exec": "$HOME/.config/hypr/UserScripts/WeatherWrap.sh",
-    "exec-if": "ping wttr.in -c1",
+    "exec": "$HOME/.config/hypr/scripts/WeatherWrap.sh",
     "tooltip" : true,
 },
   
@@ -454,5 +374,4 @@
     "tooltip": false
 }
 }
-  
   
