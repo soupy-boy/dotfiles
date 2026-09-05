@@ -1,44 +1,35 @@
 {
-"include": "~/.config/waybar/modules.jsonc",
-"layer": "top",
-"position": "top",
-"height": 40,
-"margin-left": 4,
-"margin-right": 4,
-"margin-top": 4,
-	
-"modules-left": [
-	"custom/separator#blank_1",
-	"custom/menu",
-	"custom/separator#blank_1",
-	"clock",
-	"custom/separator#blank_1",
-	"custom/weather",
-	"custom/separator#blank_1",
-	"hyprland/window"
-],
-
-"modules-center": [		
-	"hyprland/workspaces"	
-],
+	"include": "~/.config/waybar/modules.jsonc",
+	"layer": "top",
+	"position": "top",
+	"height": 40,
+	"margin-left": 4,
+	"margin-right": 4,
+	"margin-top": 4,
 		
-"modules-right": [
-	"tray",
-	"custom/separator#blank_1",
-	"custom/swaync",
-	"custom/separator#blank_1",
-	"pulseaudio",
-	"custom/separator#blank_1",
-	"custom/power",
-	"custom/separator#blank_1"
+	"modules-left": [
+		"custom/separator#blank_1",
+		"custom/menu",
+		"custom/separator#blank_1",
+		"clock",
+		"custom/separator#blank_1",
+		"custom/weather",
 	],
 
-
-// Additional format / customize modules
-
-"custom/power": {
-	"format": " ",
-	"icon-size": 20,
-	"tooltip": false
-}
+	"modules-center": [		
+		"hyprland/workspaces"	
+	],
+			
+	"modules-right": [
+		"idle_inhibitor",
+		"custom/separator#blank_1",
+		"tray",
+		"custom/separator#blank_1",
+		"custom/swaync",
+		"custom/separator#blank_1",
+		"pulseaudio",
+		"custom/separator#blank_1",
+		"custom/power",
+		"custom/separator#blank_1"
+	]
 }
