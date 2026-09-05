@@ -270,7 +270,10 @@
 },
       
 "custom/menu": {
-    "format": "{}",
+    "format": "{icon}",
+    "format-icons": [
+      "",
+    ],
     "exec": "echo ; echo 󱓟 app launcher",
     "interval" : 86400, // once every day
     "tooltip": true,
