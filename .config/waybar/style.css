@@ -110,6 +110,7 @@ window#waybar.empty #window {
 #temperature,
 #tray,
 #wireplumber,
+#window,
 #workspaces,
 #custom-backlight,
 #custom-browser,
@@ -147,8 +148,8 @@ window#waybar.empty #window {
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
 	color: @gruv_red;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-top: 2px;
+	padding-bottom: 0px;
 	padding-right: 6px;
 	padding-left: 6px;
 
@@ -156,6 +157,7 @@ window#waybar.empty #window {
 
 #custom-menu {
 	color: @gruv_blue;
+	font-family: "FontAwesome7Brands";
 }
 
 #clock {
@@ -168,10 +170,6 @@ window#waybar.empty #window {
 
 #window {
     color: @gruv_yellow;
-    padding-top: 2px;
-    padding-bottom: 0px;
-    padding-right: 6px;
-    padding-left: 6px;
 }
 
 #custom-swaync {
@@ -188,11 +186,9 @@ window#waybar.empty #window {
 
 #mode {
 	color: @gruv_red_2;
-	font-weight: bold;
 }
 #custom-power {
 	color: @gruv_red_2;
-	padding: 1px 3px;
 }
 /*-----Indicators----*/
 #idle_inhibitor.activated {
