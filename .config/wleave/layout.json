@@ -4,27 +4,6 @@
     },
     "buttons": [
         {
-            "label": "lock",
-            "action": "pidof hyprlock || hyprlock",
-            "text": "Lock",
-            "keybind": "l",
-            "icon": "/usr/share/wleave/icons/lock.svg"
-        },
-        {
-            "label": "hibernate",
-            "action": "systemctl hibernate",
-            "text": "Hibernate",
-            "keybind": "h",
-            "icon": "/usr/share/wleave/icons/hibernate.svg"
-        },
-        {
-            "label": "logout",
-            "action": "hyprctl dispatch exit",
-            "text": "Logout",
-            "keybind": "e",
-            "icon": "/usr/share/wleave/icons/logout.svg"
-        },
-        {
             "label": "shutdown",
             "action": "systemctl poweroff",
             "text": "Shutdown",
@@ -44,7 +23,24 @@
             "text": "Reboot",
             "keybind": "r",
             "icon": "/usr/share/wleave/icons/reboot.svg"
+        },
+        {
+            "label": "lock",
+            "action": "pidof hyprlock || hyprlock",
+            "text": "Lock",
+            "keybind": "l",
+            "icon": "/usr/share/wleave/icons/lock.svg"
+        },
+        {
+            "label": "logout",
+            "action": "hyprctl dispatch 'hl.dsp.exit()'",
+            "text": "Logout",
+            "keybind": "e",
+            "icon": "/usr/share/wleave/icons/logout.svg"
         }
     ],
+    "buttons-per-row": "1/1",
+    "button-aspect-ratio": "3/4",
+    "margin": "5%",
     "no-version-info": true
 }
