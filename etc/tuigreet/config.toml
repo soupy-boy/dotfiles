@@ -1,0 +1,24 @@
+[background]
+kind = "matrix"
+fps = 30
+
+[display]
+show_time = true
+greeting = "Nice to see you :)"
+issue = false
+
+[remember]
+username = true
+
+[secret]
+mode = "characters"
+characters = "*"
+
+[theme]
+border = "blue"
+text = "white"
+container = "black"
+prompt = "green"
+input = "yellow"
+action = "magenta"
+button = "cyan"
