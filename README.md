@@ -20,3 +20,8 @@ cd scripts
 cd scripts
 ./protonge_update.sh
 ```
+
+# attributions
+
+## code adapted from JaKooLit Hyprland-Dots originally, still using many scripts originally from here - https://github.com/JaKooLit/Hyprland-Dots
+## Gruvminimal theme for gtk, kvantum, and qt - https://github.com/MrVivekRajan/Hypr-Dots
