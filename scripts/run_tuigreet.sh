@@ -24,5 +24,5 @@ if [ "$TERM" = "linux" ]; then
   clear
 fi
 
-exec /usr/local/bin/tuigreet --cmd start-hyprland
+exec tuigreet --cmd start-hyprland
 
