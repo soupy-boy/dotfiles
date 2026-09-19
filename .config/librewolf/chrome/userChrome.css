@@ -1,0 +1,40 @@
+/*
+ * Gruvbox Dark Hard — manual browser-chrome theme
+ * Replicates https://github.com/teatwig/gruvbox-firefox-themes (Dark Hard)
+ * toolbar                  #32302f  (bg)
+ * frame / toolbar_field    #1d2021  (titlebar, urlbar)
+ * active text              #ebdbb2
+ * inactive text            #a89984
+ * accent (tab line/load)   #689d6a
+ */
+
+:root {
+  /* Window chrome / titlebar */
+  --lwt-accent-color: #1d2021 !important;
+  --lwt-text-color: #a89984 !important;
+
+  /* Toolbar (nav bar / tab bar) */
+  --toolbar-bgcolor: #32302f !important;
+  --toolbar-color: #ebdbb2 !important;
+  --toolbar-bottom-separator: #32302f !important;
+  --chrome-content-separator-color: #32302f !important;
+
+  /* Address / search field */
+  --toolbar-field-background-color: #1d2021 !important;
+  --toolbar-field-color: #ebdbb2 !important;
+  --toolbar-field-border-color: #32302f !important;
+
+  /* Tabs */
+  --lwt-tab-line-color: #689d6a !important;
+  --tab-loading-fill: #689d6a !important;
+
+  /* Popups / context menus / dropdowns */
+  --arrowpanel-background: #1d2021 !important;
+  --arrowpanel-color: #ebdbb2 !important;
+  --arrowpanel-border-color: #32302f !important;
+
+  /* Sidebar */
+  --lwt-sidebar-background-color: #1d2021 !important;
+  --lwt-sidebar-text-color: #ebdbb2 !important;
+  --lwt-sidebar-border-color: #32302f !important;
+}

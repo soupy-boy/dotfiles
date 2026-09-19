@@ -1,0 +1,20 @@
+/*
+ * Gruvbox Dark Hard — manual theme for internal pages (new tab / home)
+ * ntp_background #1d2021, ntp_text #ebdbb2 (matches repo theme)
+ */
+
+@-moz-document url(about:home), url(about:newtab) {
+  :root {
+    --newtab-background-color: #1d2021 !important;
+    --newtab-background-color-secondary: #32302f !important;
+    --newtab-text-primary-color: #ebdbb2 !important;
+    --newtab-text-secondary-color: #a89984 !important;
+    --newtab-element-hover-color: #32302f !important;
+    --newtab-element-active-color: #32302f !important;
+    --newtab-element-secondary-hover-color: #32302f !important;
+    --newtab-icon-primary-color: #ebdbb2 !important;
+    --newtab-icon-secondary-color: #a89984 !important;
+    --newtab-border-primary-color: #32302f !important;
+    --newtab-border-secondary-color: #1d2021 !important;
+  }
+}
