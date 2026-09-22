@@ -20,11 +20,11 @@
 }
 
 .notification {
-    color: @text-color;
-    background: @noti-bg;
+    color: @base05;
+    background: @base00;
     padding: 5px;
     border-radius: 5px;
-    border: 2px solid @noti-border-color;
+    border: 2px solid @base16;
 }
 
 .notification-group {
@@ -38,8 +38,8 @@
 }
 
 .close-button {
-    color: @noti-bg;
-    background: @noti-close;
+    color: @base00;
+    background: @base08;
     text-shadow: none;
     padding: 0;
     border-radius: 10px;
@@ -48,8 +48,8 @@
 }
 
 .close-button:hover {
-    color: @noti-bg;
-    background: @noti-close-hover;
+    color: @base00;
+    background: @base12;
     box-shadow: none;
     transition: all .15s ease-in-out;
     border: none;
@@ -57,7 +57,7 @@
 
 
 .notification-action {
-    border: 1px solid @noti-border-color;
+    border: 1px solid @base16;
     border-top: none;
     border-radius: 10px;
 }
@@ -65,8 +65,8 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-    color: @text-color;
-    background: @noti-bg;
+    color: @base05;
+    background: @base00;
 }
 
 
@@ -78,7 +78,7 @@
 .body-image {
     margin-top: 6px;
     background: transparent;
-    color: @text-color;
+    color: @base05;
     border-radius: 10px;
 }
 
@@ -86,7 +86,7 @@
     font-size: 1rem;
     font-weight: bold;
     background: transparent;
-    color: @text-color;
+    color: @base05;
     text-shadow: none;
 }
 
@@ -99,9 +99,9 @@
 
 
 .control-center {
-    color: @text-color;
-    background: @noti-bg;
-    border: 1px solid @noti-border-color;
+    color: @base05;
+    background: @base00;
+    border: 1px solid @base16;
     border-radius: 0px;
     max-height: 720px;
     height: auto;
@@ -121,7 +121,7 @@
 /* all labels*/
 
 label {
-    color: @text-color;
+    color: @base05;
     font-size: 18px;
     font-weight: bold;
 }
@@ -142,16 +142,16 @@ label {
 
 /* clear button */
 .widget-title>button {
-    color: @text-color;
+    color: @base05;
     background: transparent;
     border-radius: 0px;
-    border: 2px solid @noti-bg-alt;
+    border: 2px solid @base01;
 }
 
 /* clear button hover */
 .widget-title>button:hover {
-    background: @noti-border-color;
-    color: @noti-close;
+    background: @base16;
+    color: @base08;
 }
 
 /* Do not disturb */
@@ -165,29 +165,29 @@ label {
 /* do not disturb switch */
 .widget-dnd>switch {
     border-radius: 0px;
-    border: 2px solid @noti-bg-alt;
-    background: @noti-border-color;
+    border: 2px solid @base01;
+    background: @base16;
 }
 
 .widget-dnd>switch:checked {
-    background: @noti-close-hover;
+    background: @base12;
 }
 
 .widget-dnd>switch slider {
-    background: @noti-bg;
+    background: @base00;
     border-radius: 0px;
 }
 
 .widget-dnd>switch:checked slider {
-    background: @noti-bg;
+    background: @base00;
     border-radius: 0px;
 }
 /* end of do not disturb widget */
 
 /* media player widget */
 .widget-mpris {
-    color: @text-color;
-    background: @noti-bg;
+    color: @base05;
+    background: @base00;
     padding: 3px 6px;
     margin: 5px;
     border-radius: 10px;
@@ -218,23 +218,23 @@ label {
     padding: 2px;
     margin: 10px 10px 5px 10px;
     border-radius: 0px;
-    color: @text-color;
+    color: @base05;
 }
 
 .widget-volume trough {
-    background: @noti-bg-alt;
+    background: @base01;
     border-radius: 0px;
     min-height: 3px;
 }
 
 .widget-volume highlight {
-    background: @text-color;
+    background: @base05;
     border-radius: 0px;
 }
 .widget-volume slider {
-    background: @noti-border-color;
+    background: @base16;
     border-radius: 0px;
-    border: 1px solid @noti-bg-alt;
+    border: 1px solid @base01;
     margin: -3px;
 }
 
