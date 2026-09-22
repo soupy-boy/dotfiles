@@ -18,7 +18,7 @@ configuration {
 }
 
 /* ---- Load colors ---- */
-@import "~/.config/rofi/colors/gruvbox_aqua.rasi"
+@import "~/.config/rofi/colors.rasi"
 
 /* ---- Window ---- */
 window {

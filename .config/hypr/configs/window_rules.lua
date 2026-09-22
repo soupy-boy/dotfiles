@@ -134,6 +134,6 @@ hl.window_rule({ match = { tag = "im" }, workspace = "6", no_initial_focus = tru
 
 -- LAYER RULES (Blurring popups like Rofi/SwayNC)
 -- Note: Layer rules use hl.layer_rule()
-hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
+hl.layer_rule({ match = { namespace = "rofi" } })
 hl.layer_rule({ match = { namespace = "notifications" }, blur = true })
 

@@ -1,0 +1,9 @@
+* {
+    background:     {{ base16.base00.default.hex }};
+    background-alt: {{ base16.base01.default.hex }};
+    foreground:     {{ base16.base05.default.hex }};
+    selected:       {{ base16.base0c.default.hex }};
+    active:         {{ base16.base14.default.hex }};
+    urgent:         {{ base16.base12.default.hex }};
+}
+
