@@ -38,6 +38,7 @@ hl.window_rule({ match = { class = "^(hl2_linux)" }, tag = "+games" })
 hl.window_rule({ match = { title = "^(Barony)" }, tag = "+games" })
 hl.window_rule({ match = { title = "^(Kerbal Space Program)" }, tag = "+games" })
 hl.window_rule({ match = { title = "^(Getting Over It)" }, tag = "+games" })
+hl.window_rule({ match = { title = "^(Valheim)" }, tag = "+games" })
 
 -- gamestore tags
 hl.window_rule({ match = { class = "^([Ss]team)$" }, tag = "+gamestore" })

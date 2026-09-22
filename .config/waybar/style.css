@@ -1,4 +1,6 @@
-/* gruvbox - orignally JakooLit */
+/* waybar style orignally JakooLit */
+
+@import "colors.css";
 
 *{
 font-family: "IosevkaTerm Nerd Font";
@@ -7,20 +9,6 @@ font-weight: bold;
 font-size: 16px;
 font-feature-settings: "zero, ss01, ss02, ss03, ss04, ss05, cv31";
 }
-
-@define-color foreground #ebdbb2;
-@define-color background #282828;
-@define-color cursor #9ebbba;
-
-@define-color gruv_red #cc241d;
-@define-color gruv_red_2 #fb4934;
-@define-color gruv_green #98971a;
-@define-color gruv_yellow #d79921;
-@define-color gruv_blue #458588;
-@define-color gruv_blue_2 #83a598;
-@define-color gruv_purple #b16286;
-@define-color gruv_aqua #689d6a;
-@define-color gruv_grey #928374;
 
 #waybar.empty, #waybar.tiled, #waybar.floating {
 	background-color: transparent;
@@ -38,8 +26,8 @@ window#waybar.empty #window {
 .modules-left,
 .modules-center,
 .modules-right {
-	background-color: @background;
-	border: 0.5px solid @foreground;
+	background-color: @base00;
+	border: 0.5px solid @base06;
 	border-radius: 10px;
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -50,7 +38,7 @@ window#waybar.empty #window {
 /*-----modules indv----*/
 #taskbar button,
 #workspaces button {
-    color: @gruv_red;
+    color: @base08;
     box-shadow: none;
     text-shadow: none;
     border-radius: 9px;
@@ -66,8 +54,8 @@ window#waybar.empty #window {
 
 #taskbar button.active,
 #workspaces button.active {
-    color: @foreground;
-    background-color: @gruv_red;
+    color: @base06;
+    background-color: @base08;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -78,18 +66,18 @@ window#waybar.empty #window {
 }
 
 #workspaces button.focused {
-    color: @gruv_grey;
+    color: @base04;
 }
 
 
 #workspaces button.urgent {
-    color: @gruv_yellow;
+    color: @base0a;
     border-radius: 10px;
 }
 
 #taskbar button:hover,
 #workspaces button:hover {
-    color: @gruv_blue_2;
+    color: @base0d;
 }
 
 #backlight,
@@ -149,23 +137,23 @@ window#waybar.empty #window {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-	color: @gruv_red;
+	color: @base08;
 	padding-right: 6px;
 	padding-left: 6px;
 
 }
 
 #custom-menu {
-	color: @gruv_blue;
+	color: @base0d;
 	font-family: "Font Awesome 7 Brands", "Font Awesome 7 Free";
 }
 
 #clock {
-	color: @gruv_green;
+	color: @base0b;
 }
 
 #custom-weather {
-	color: @gruv_purple;
+	color: @base0e;
 }
 
 #idle_inhibitor {
@@ -173,40 +161,40 @@ window#waybar.empty #window {
 }
 
 #window {
-    color: @gruv_yellow;
+    color: @base0a;
 }
 
 #custom-swaync {
-    color: @gruv_blue;
+    color: @base0d;
 }
 
 #mpris {
-	color: @gruv_purple;
+	color: @base0e;
 }
 
 #pulseaudio {
-	color: @gruv_aqua;
+	color: @base0c;
 }
 
 #mode {
-	color: @gruv_red_2;
+	color: @base08;
 }
 #custom-power {
-	color: @gruv_red_2;
+	color: @base08;
 	font-family: "Font Awesome 7 Brands", "Font Awesome 7 Free";
 }
 /*-----Indicators----*/
 #idle_inhibitor.activated {
-	color: @gruv_green;
+	color: @base0b;
 }
 #pulseaudio.muted {
-	color: @gruv_red_2;
+	color: @base08;
 }
 #pulseaudio-microphone.muted {
-	color: @gruv_red;
+	color: @base08;
 }
 #temperature.critical {
-    background-color: @gruv_red;
+    background-color: @base08;
 }
 
 #tray {
@@ -215,7 +203,7 @@ window#waybar.empty #window {
 
 @keyframes blink {
     to {
-        color: @gruv_yellow;
+        color: @base0a;
     }
 }
 
