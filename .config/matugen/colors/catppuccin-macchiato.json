@@ -127,6 +127,70 @@
       "default": {
         "color": "#f0c6c6"
       }
+    },
+    "base10": {
+      "dark": {
+        "color": "#1e2030"
+      },
+      "default": {
+        "color": "#1e2030"
+      }
+    },
+    "base11": {
+      "dark": {
+        "color": "#181926"
+      },
+      "default": {
+        "color": "#181926"
+      }
+    },
+    "base12": {
+      "dark": {
+        "color": "#ee99a0"
+      },
+      "default": {
+        "color": "#ee99a0"
+      }
+    },
+    "base13": {
+      "dark": {
+        "color": "#f4dbd6"
+      },
+      "default": {
+        "color": "#f4dbd6"
+      }
+    },
+    "base14": {
+      "dark": {
+        "color": "#a6da95"
+      },
+      "default": {
+        "color": "#a6da95"
+      }
+    },
+    "base15": {
+      "dark": {
+        "color": "#91d7e3"
+      },
+      "default": {
+        "color": "#91d7e3"
+      }
+    },
+    "base16": {
+      "dark": {
+        "color": "#7dc4e4"
+      },
+      "default": {
+        "color": "#7dc4e4"
+      }
+    },
+    "base17": {
+      "dark": {
+        "color": "#f5bde6"
+      },
+      "default": {
+        "color": "#f5bde6"
+      }
     }
   }
 }
