@@ -1,20 +1,20 @@
 /*
- * Gruvbox Dark Hard — manual theme for internal pages (new tab / home)
- * ntp_background #1d2021, ntp_text #ebdbb2 (matches repo theme)
+ * manual theme for internal pages (new tab / home)
  */
+@import "colors.css";
 
 @-moz-document url(about:home), url(about:newtab) {
   :root {
-    --newtab-background-color: #1d2021 !important;
-    --newtab-background-color-secondary: #32302f !important;
-    --newtab-text-primary-color: #ebdbb2 !important;
-    --newtab-text-secondary-color: #a89984 !important;
-    --newtab-element-hover-color: #32302f !important;
-    --newtab-element-active-color: #32302f !important;
-    --newtab-element-secondary-hover-color: #32302f !important;
-    --newtab-icon-primary-color: #ebdbb2 !important;
-    --newtab-icon-secondary-color: #a89984 !important;
-    --newtab-border-primary-color: #32302f !important;
-    --newtab-border-secondary-color: #1d2021 !important;
+    --newtab-background-color: var(--base00) !important;
+    --newtab-background-color-secondary: var(--base01) !important;
+    --newtab-text-primary-color: var(--base06) !important;
+    --newtab-text-secondary-color: var(--base05) !important;
+    --newtab-element-hover-color: var(--base01) !important;
+    --newtab-element-active-color: var(--base01) !important;
+    --newtab-element-secondary-hover-color: var(--base01) !important;
+    --newtab-icon-primary-color: var(--base06) !important;
+    --newtab-icon-secondary-color: var(--base05) !important;
+    --newtab-border-primary-color: var(--base01) !important;
+    --newtab-border-secondary-color: var(--base00) !important;
   }
 }

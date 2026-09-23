@@ -8,6 +8,10 @@ output_path = '~/.config/hypr/hyprlock-colors.conf'
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/kitty-colors.conf'
 
+[templates.librewolf]
+input_path = '~/.config/matugen/templates/librewolf.css'
+output_path = '~/.config/librewolf/chrome/colors.css'
+
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
 output_path = '~/.config/rofi/colors.rasi'

@@ -1,40 +1,61 @@
 /*
- * Gruvbox Dark Hard — manual browser-chrome theme
- * Replicates https://github.com/teatwig/gruvbox-firefox-themes (Dark Hard)
- * toolbar                  #32302f  (bg)
- * frame / toolbar_field    #1d2021  (titlebar, urlbar)
- * active text              #ebdbb2
- * inactive text            #a89984
- * accent (tab line/load)   #689d6a
+ * manual browser-chrome theme
+ * adapted from https://github.com/teatwig/gruvbox-firefox-themes
+ *
+ * NOTE: variable names target the theme API used by Firefox 152+ (LibreWolf
+ * 156). The old names (`--toolbar-bgcolor`, `--toolbar-color`,
+ * `--arrowpanel-background`, ...) were removed in Fx152 and would be ignored.
  */
+
+@import "colors.css";
 
 :root {
   /* Window chrome / titlebar */
-  --lwt-accent-color: #1d2021 !important;
-  --lwt-text-color: #a89984 !important;
+  --lwt-accent-color: var(--base00) !important;
+  --lwt-text-color: var(--base05) !important;
 
-  /* Toolbar (nav bar / tab bar) */
-  --toolbar-bgcolor: #32302f !important;
-  --toolbar-color: #ebdbb2 !important;
-  --toolbar-bottom-separator: #32302f !important;
-  --chrome-content-separator-color: #32302f !important;
+  /* Toolbox = tab strip area + titlebar (what the tabs sit on) */
+  --toolbox-background-color: var(--base01) !important;
+  --toolbox-background-color-inactive: var(--base01) !important;
+  --toolbox-text-color: var(--base05) !important;
+  --toolbox-text-color-inactive: var(--base05) !important;
 
-  /* Address / search field */
-  --toolbar-field-background-color: #1d2021 !important;
-  --toolbar-field-color: #ebdbb2 !important;
-  --toolbar-field-border-color: #32302f !important;
+  /* Toolbar (nav bar / tab bar). These are the Fx152+ names. */
+  --toolbar-background-color: var(--base01) !important;
+  --toolbar-text-color: var(--base05) !important;
+  --chrome-content-separator-color: var(--base01) !important;
+  --tabs-navbar-separator-color: var(--base01) !important;
+  --toolbarbutton-icon-fill: var(--base05) !important;
+
+  /* Address / search field (classic vars + the Fx152+ "smartbar" token) */
+  --toolbar-field-background-color: var(--base00) !important;
+  --toolbar-field-text-color: var(--base05) !important;
+  --toolbar-field-border-color: var(--base01) !important;
+  --toolbar-field-background-color-focus: var(--base00) !important;
+  --toolbar-field-text-color-focus: var(--base05) !important;
+  --toolbar-field-focus-color: var(--base05) !important;
+  --toolbar-field-border-color-focus: var(--base01) !important;
+  --smartbar-background-color: var(--base00) !important;
+  --smartbar-inactive-background-color: var(--base00) !important;
 
   /* Tabs */
-  --lwt-tab-line-color: #689d6a !important;
-  --tab-loading-fill: #689d6a !important;
+  --tab-background-color-selected: var(--base01) !important;
+  --tab-background-color-hover: var(--base02) !important;
+  --tab-selected-textcolor: var(--base05) !important;
+  --lwt-tab-line-color: var(--base0c) !important;
+  --tab-selected-outline-color: var(--base0c) !important;
+  --tab-loading-fill: var(--base0c) !important;
 
-  /* Popups / context menus / dropdowns */
-  --arrowpanel-background: #1d2021 !important;
-  --arrowpanel-color: #ebdbb2 !important;
-  --arrowpanel-border-color: #32302f !important;
+  /* Popups / context menus / dropdowns (Fx152+ names + legacy aliases) */
+  --panel-background-color: var(--base00) !important;
+  --panel-text-color: var(--base05) !important;
+  --panel-border-color: var(--base01) !important;
+  --arrowpanel-background: var(--base00) !important;
+  --arrowpanel-color: var(--base05) !important;
+  --arrowpanel-border-color: var(--base01) !important;
 
   /* Sidebar */
-  --lwt-sidebar-background-color: #1d2021 !important;
-  --lwt-sidebar-text-color: #ebdbb2 !important;
-  --lwt-sidebar-border-color: #32302f !important;
+  --lwt-sidebar-background-color: var(--base00) !important;
+  --lwt-sidebar-text-color: var(--base05) !important;
+  --lwt-sidebar-border-color: var(--base01) !important;
 }

@@ -1,0 +1,9 @@
+/*
+* LibreWolf colors
+* Generated with Matugen
+*/
+:root {
+<* for name, value in base16 *>
+  --{{name}}: {{value.default.hex}};
+<* endfor *>
+}
