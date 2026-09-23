@@ -30,3 +30,8 @@ post_hook = "pkill -SIGUSR2 waybar"
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/wleave/colors.css'
 
+[templates.nvim]
+input_path = '~/.config/matugen/templates/nvim-base24.lua'
+output_path = '~/.config/nvim/lua/tinted-nvim/palettes/base24-matugen.lua'
+post_hook = "pkill -SIGUSR1 nvim"
+

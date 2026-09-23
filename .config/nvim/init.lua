@@ -377,24 +377,40 @@ do
   }
 
   -- [[ Colorscheme ]]
-  -- You can easily change to a different colorscheme.
-  -- Change the name of the colorscheme plugin below, and then
-  -- change the command under that to load whatever the name of that colorscheme is.
-  --
-  -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  vim.pack.add { gh 'ellisonleao/gruvbox.nvim' }
-  require('gruvbox').setup {
-  ---@diagnostic disable-next-line: missing-fields
-    italic = {
-      comments = false
-    }
+  -- tinted-nvim, powered by the base24 palette that matugen renders from your
+  -- theme JSON (~/.config/matugen/colors/<theme>.json) into
+  --   lua/tinted-nvim/palettes/base24-matugen.lua
+  -- falling back to a bundled scheme until that file exists.
+  vim.pack.add { gh 'tinted-theming/tinted-nvim' }
+  require('tinted-nvim').setup {
+    -- Fallback scheme, used until the first matugen run writes the palette.
+    default_scheme = 'base16-ayu-dark',
+    -- Keep off: the scheme is regenerated at runtime by matugen.
+    compile = false,
   }
 
-  -- Load the colorscheme here.
-  -- Like many other themes, this one has different styles, and you could load
-  -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  vim.o.background = "dark"
-  vim.cmd.colorscheme 'gruvbox'
+  local matugen_palette = vim.fn.stdpath 'config' .. '/lua/tinted-nvim/palettes/base24-matugen.lua'
+
+  local function load_matugen_scheme()
+    -- Invalidate the cached module so the freshly-rendered file is re-read.
+    package.loaded['tinted-nvim.palettes.base24-matugen'] = nil
+    if vim.fn.filereadable(matugen_palette) == 1 then
+      local ok_palette = pcall(require, 'tinted-nvim.palettes.base24-matugen')
+      if ok_palette then
+        require('tinted-nvim').load('base24-matugen')
+      end
+    end
+  end
+
+  -- Apply the matugen scheme at startup (overrides the fallback above).
+  load_matugen_scheme()
+
+  -- matugen's template post_hook sends SIGUSR1 to nvim after rewriting the
+  -- palette file; reload the scheme when it arrives.
+  vim.api.nvim_create_autocmd('Signal', {
+    pattern = 'SIGUSR1',
+    callback = load_matugen_scheme,
+  })
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
