@@ -44,7 +44,7 @@ main() {
     for m in $monitor; do
         hyprctl hyprpaper wallpaper "$m, ${wallDIR}/${RANDOM_PIC}"
     done
-    ${SCRIPTSDIR}/ChangeInitialWallpaper.sh "${wallDIR}/${RANDOM_PIC}"
+    ln -sf "${wallDIR}/${RANDOM_PIC}" "${wallDIR}/.current_wallpaper"
     exit 0
   fi
 
@@ -62,7 +62,7 @@ main() {
     for m in $monitor; do
         hyprctl hyprpaper wallpaper "$m, ${wallDIR}/${PICS[$pic_index]}"
     done
-    ${SCRIPTSDIR}/ChangeInitialWallpaper.sh "${wallDIR}/${PICS[$pic_index]}"
+    ln -sf "${wallDIR}/${PICS[$pic_index]}" "${wallDIR}/.current_wallpaper"
   else
     echo "Image not found."
     exit 1
