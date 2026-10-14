@@ -1,0 +1,6 @@
+com.discordapp.Discord
+com.heroicgameslauncher.hgl
+com.tutanota.Tutanota
+io.freetubeapp.FreeTube
+org.localsend.localsend_app
+org.vinegarhq.Sober
