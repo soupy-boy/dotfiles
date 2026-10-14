@@ -2,7 +2,7 @@ dotfiles repository for all configuration and scripts that i have
 
 # install necessary packages from pacman and flatpak
 sudo pacman -S --needed - < ~/pkglist/pacman_packages.txt
-sudo pacman -S --needed - < ~/pkglist/flatpak_packages.txt
+xargs flatpak install -y < ~/pkglist/flatpak_packages.txt
 
 # manual installs
 
