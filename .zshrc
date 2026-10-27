@@ -49,8 +49,9 @@ export VISUAL=$EDITOR
 export JAVA_HOME=/opt/android-studio/jbr
 
 # path stuff
-export PATH=$PATH:/usr/lib/emscripten
+export PATH="/usr/lib/emscripten:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # aliases
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
