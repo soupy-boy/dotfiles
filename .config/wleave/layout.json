@@ -12,7 +12,7 @@
         },
         {
             "label": "suspend",
-            "action": "systemctl suspend",
+            "action": "loginctl lock-session; sleep 1; hyprctl dispatch 'hl.dsp.dpms({ action = \"disable\" })'; sleep 0.5; systemctl suspend",
             "text": "Suspend",
             "keybind": "u",
             "icon": "/usr/share/wleave/icons/suspend.svg"

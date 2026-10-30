@@ -168,6 +168,15 @@ window#waybar.empty #window {
     color: @base0d;
 }
 
+#bluetooth {
+    color: @base16;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: @base04;
+}
+
 #mpris {
 	color: @base0e;
 }
